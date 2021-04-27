@@ -43,7 +43,7 @@ for cid, name in tqdm(company_ids):
                             if not st in all_time_dic:
                                 all_time_dic.append(st)
                         all_score.append(score)
-        if len(all_score) >= 2 and len(all_time_dic) >= 24:
+        if len(all_score) >= 2 and len(all_time_dic) >= 20:
             all_season.append((name, manager, "http://fund.eastmoney.com/Company/f10/jjjl_"+cid+".html", np.mean(all_score)))
 all_season.sort(key=lambda x:x[3], reverse=True)
 for i in range(len(all_season)):
